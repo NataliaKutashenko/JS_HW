@@ -1,2 +1,2 @@
-let result3 = 5 && "qwerty"; // число 5 є true,тому && буде перевіряти 2ий операнд
-console.log(result3); // Виведе: qwerty
+let result1 = 'number' + 3 + 3; // перетворює число 3 на стрінгу
+console.log(result1); // Виведе: number33
