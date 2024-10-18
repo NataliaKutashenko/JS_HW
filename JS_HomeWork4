@@ -1,0 +1,28 @@
+function checkProbabilityCount(count) {
+    let evenCount = 0; 
+    let oddCount = 0;  
+
+    for (let i = 0; i < count; i++) { 
+        let rnd = Math.floor(Math.random() * (1000 - 100 + 1)) + 100; 
+        console.log(rnd); 
+
+      
+        if (rnd % 2 === 0) {
+            evenCount++; 
+        } else {
+            oddCount++; 
+        }
+    }
+    let evenPercentage = (evenCount / count) * 100;
+    let oddPercentage = (oddCount / count) * 100;
+   
+   
+    console.log(`Total numbers generated: ${count}`);
+    console.log(`Even numbers: ${evenCount}`);
+    console.log(`Odd numbers: ${oddCount}`);
+    console.log (evenPercentage);
+    console.log (oddPercentage);
+}
+
+
+checkProbabilityCount(10);

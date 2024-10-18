@@ -1,0 +1,22 @@
+function countEvenOddNumbers(count) {
+    let evenCount = 0; // Лічильник парних чисел
+    let oddCount = 0;  // Лічильник непарних чисел
+
+    for (let i = 0; i < count; i++) {
+        let num = Math.floor(Math.random() * 901) + 100; // Число від 100 до 1000
+
+        if (num % 2 === 0) {
+            evenCount++; // Якщо число парне
+        } else {
+            oddCount++;  // Якщо число непарне
+        }
+    }
+    let evenPercentage = (evenCount / count) * 100;
+    let oddPercentage = (oddCount / count) * 100;
+    console.log(`Кількість згенерованих чисел: ${count}`);
+    console.log(`Парних чисел: ${evenCount}`);
+    console.log(`Непарних чисел: ${oddCount}`);
+    console.log(`Відсоток парних: ${(evenCount / count * 100);
+    console.log(`Відсоток непарних: ${(oddCount / count * 100);
+
+    }
