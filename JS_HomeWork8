@@ -1,0 +1,51 @@
+var services = {
+    "haircut": "60",
+    "shave": "80",
+    "hairwash": "100"
+};
+
+services['break glass'] = "200";
+
+services.price = function () {
+    var total = 0; 
+    for (var key in this) { 
+        var value = this[key]; 
+        if (typeof value === "string") { 
+            total += Number(value); 
+        }
+    }
+    return total; 
+};
+
+services.minPrice = function () {
+    var min = Number(this.haircut); 
+    for (var key in this) {
+        var value = this[key];
+        if (typeof value === "string") {
+            var priceValue = Number(value); 
+            if (priceValue < min) { 
+                min = priceValue; 
+            }
+        }
+    }
+    return min; 
+};
+
+services.maxPrice = function () {
+    var max = Number(this.haircut); 
+    for (var key in this) {
+        var value = this[key];
+        if (typeof value === "string") {
+            var priceValue = Number(value); 
+            if (priceValue > max) { 
+                max = priceValue; 
+            }
+        }
+    }
+    return max; 
+};
+
+var total = services.price();
+console.log(`Загальна вартість: ${total} грн`);
+console.log(`Мінімальна ціна: ${services.minPrice()} грн`);
+console.log(`Максимальна ціна: ${services.maxPrice()} грн`);
