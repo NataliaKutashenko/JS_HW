@@ -1,0 +1,13 @@
+let toy = {
+    name: "Bunny",
+    type: "velvet",
+    id: 1,
+    getInfo: function() {
+      console.log(`This is an information about ${this.name}, I am from ${this.type} and my number is ${this.id}.`);
+    }
+  };
+  toy.getInfo();
+
+  toy.name = "BunzoBunny",
+  console.log (toy.name);
+  toy.getInfo ();
